@@ -37,4 +37,17 @@
     object-fit: cover;
     object-position: center;
     display: block;
+
+    .daftar-tugas li {
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.daftar-tugas ol {
+    margin-top: 10px;
+}
+
+.daftar-tugas ol li {
+    margin-bottom: 5px;
+}
 }
