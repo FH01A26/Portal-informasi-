@@ -1,3 +1,158 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FH 01 ANGKATAN 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+*{box-sizing:border-box}
+body{margin:0;font-family:'DM Sans',sans-serif;background:#fff;color:#171717}
+body:before{content:"";position:fixed;inset:0 0 auto 0;height:5px;background:#a40000;z-index:5}
+.top{height:auto;min-height:76px;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:25px;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:4}
+.brand{display:flex;align-items:center;gap:11px}
+.logo{width:45px;height:45px;border-radius:12px;background:#a40000;color:#fff;display:grid;place-items:center;font-weight:800;overflow:hidden;flex-shrink:0}
+.logo img{width:100%;height:100%;object-fit:cover}
+.brand b{display:block}
+.brand small{display:block;color:#777;font-size:10px;letter-spacing:2px}
+nav{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+nav a{padding:9px 12px;border-radius:9px;color:#444;text-decoration:none;font-size:13px}
+nav a:hover,nav a.active{background:#a40000;color:white}
+.hero{min-height:590px;background:linear-gradient(120deg,#8f0000,#c00 55%,#eee 55%,#fff);color:#fff;padding:75px 7%;display:flex;align-items:center;justify-content:space-between;gap:45px}
+.hero-text{max-width:650px}
+.pill,.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(50px,8vw,92px);line-height:.92;margin:18px 0}
+.hero h1 em{font-size:.48em;font-style:normal;color:#ffe7e7}
+.hero p{font-size:18px;line-height:1.6;max-width:570px}
+.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 20px;border-radius:10px;background:#fff;color:#a00000;text-decoration:none;font-weight:700;border:0}
+.btn.ghost{background:transparent;color:#fff;border:1px solid #fff}
+.photo{width:min(410px,38vw);height:410px;display:grid;place-items:center;overflow:visible;flex-shrink:0}
+.hero-logo{width:100%;height:100%;display:grid;place-items:center}
+.hero-logo img{width:90%;height:90%;object-fit:contain;object-position:center;display:block;filter:drop-shadow(0 12px 18px rgba(0,0,0,.22))}
+.section,.page{max-width:1150px;margin:auto;padding:75px 5%}
+.section-head{display:flex;justify-content:space-between}
+.eyebrow{color:#a00000}
+h1,h2{font-family:'Playfair Display',serif}
+h2{font-size:38px;margin:8px 0 28px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{min-height:170px;padding:24px;border:1px solid #eee;border-radius:18px;text-decoration:none;color:#171717;display:flex;flex-direction:column;gap:12px;box-shadow:0 10px 30px #00000008;transition:.2s}
+.card:hover{transform:translateY(-5px);border-color:#d8aaaa}
+.card b{font-size:18px}
+.card span,.muted{color:#777;line-height:1.6}
+.card strong{margin-top:auto;color:#a00000}
+.notice{margin:0 auto 75px;padding:35px;width:90%;max-width:1050px;border-radius:22px;background:#f8eeee;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.notice h2{margin:7px 0}
+.notice p{color:#666}
+footer{text-align:center;padding:30px;background:#1b1b1b;color:#aaa;font-size:12px}
+
+.legal-arena{--arena-ink:#15251f;--arena-muted:#728078;--arena-line:#e5e9e5;margin:56px auto 38px;padding:30px;width:90%;max-width:1050px;border:1px solid var(--arena-line);border-radius:24px;background:#f8faf8;color:var(--arena-ink);overflow:hidden}
+.arena-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}
+.arena-eyebrow,.arena-tag{display:inline-block;color:#8d7442;font-size:11px;font-weight:800;letter-spacing:2px}
+.arena-top h2{margin:9px 0 7px;font-size:clamp(29px,5vw,46px);line-height:1;letter-spacing:-1.8px}
+.arena-top h2 span{color:#9a804d}
+.arena-top p,.arena-intro>p,.arena-result>p{color:var(--arena-muted);font-size:14px;line-height:1.8}
+.arena-emblem{display:grid;place-items:center;flex-shrink:0;width:76px;height:76px;border:1px solid #d7c8a7;border-radius:22px;background:#f0eadc;color:#907546;font-family:Georgia,serif;font-size:43px}
+.arena-panel{position:relative;padding:clamp(22px,5vw,42px);border-radius:19px;background:#fff;border:1px solid var(--arena-line);box-shadow:0 12px 40px rgba(20,40,30,.045)}
+.arena-intro,.arena-result{max-width:650px;margin:auto;text-align:center}
+.arena-icon{display:grid;place-items:center;width:76px;height:76px;margin:0 auto 20px;border-radius:24px;background:#f2eee4;font-size:36px}
+.arena-intro h3,.arena-result h3{margin:13px 0 10px;font-size:clamp(25px,4vw,35px);letter-spacing:-.8px;line-height:1.25}
+.arena-intro h3 span{color:#9b8048}
+.arena-intro>p,.arena-result>p{max-width:450px;margin:0 auto}
+.arena-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:30px 0;padding:19px 0;border-top:1px solid var(--arena-line);border-bottom:1px solid var(--arena-line)}
+.arena-stats>div,.arena-result-stats>div{display:flex;flex-direction:column;gap:6px;align-items:center}
+.arena-stats>div+div{border-left:1px solid var(--arena-line)}
+.arena-stats strong{font-size:23px}
+.arena-stats small,.arena-score-row small,.arena-result-stats small,.arena-final-score small{color:var(--arena-muted);font-size:9px;font-weight:800;letter-spacing:1px}
+.arena-btn,.arena-hint,.arena-share{min-height:46px;padding:0 20px;border:0;border-radius:10px;font:inherit;font-size:12px;font-weight:800;letter-spacing:.6px;cursor:pointer;transition:transform .18s,opacity .18s,background .18s}
+.arena-btn{background:var(--arena-ink);color:#fff}
+.arena-intro>.arena-btn,.arena-result>.arena-btn{width:100%}
+.arena-btn span{margin-left:10px}
+.arena-btn:hover:not(:disabled),.arena-hint:hover:not(:disabled),.arena-share:hover{transform:translateY(-2px)}
+.arena-btn:focus-visible,.arena-hint:focus-visible,.arena-share:focus-visible,.arena-option:focus-visible{outline:3px solid #c8a968;outline-offset:3px}
+.arena-btn:disabled,.arena-hint:disabled{cursor:not-allowed;opacity:.45}
+.arena-footnote{margin:14px 0 0!important;color:#8a958e!important;font-size:11px!important}
+.arena-game-head{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:11px;font-weight:800;letter-spacing:1px}
+.arena-timer{display:grid;place-items:center;min-width:51px;min-height:36px;padding:0 10px;border-radius:10px;background:#edf2ee;color:#234d36;font-size:14px;letter-spacing:0}
+.arena-timer.is-low{background:#fff0eb;color:#b83c25}
+.arena-progress{height:5px;margin:15px 0 24px;overflow:hidden;border-radius:99px;background:#edf0ed}
+#arena-progress-fill{width:0;height:100%;border-radius:inherit;background:#b79b63;transition:width .25s ease}
+.arena-score-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:26px}
+.arena-score-row>div{display:flex;flex-direction:column;gap:5px;padding:13px;border:1px solid var(--arena-line);border-radius:12px}
+.arena-score-row strong{font-size:21px}
+.arena-question-box{padding:23px;border-radius:15px;background:#f8faf8;border:1px solid #edf0ed}
+.arena-question-label{color:#8b7446;font-size:10px;font-weight:800;letter-spacing:1.5px}
+.arena-question-box h3{margin:13px 0 22px;font-size:clamp(18px,3vw,24px);line-height:1.5}
+.arena-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.arena-option{display:flex;align-items:center;gap:12px;min-height:58px;padding:12px;border:1px solid #e1e7e2;border-radius:11px;background:#fff;color:#25372d;text-align:left;font:inherit;font-size:13px;line-height:1.5;cursor:pointer;transition:border-color .18s,background .18s}
+.arena-option:hover:not(:disabled){border-color:#b7a274;background:#fbf9f4}
+.arena-option:disabled{cursor:default}
+.arena-option-letter{display:grid;place-items:center;flex-shrink:0;width:29px;height:29px;border-radius:8px;background:#f0f3f0;font-size:11px;font-weight:800}
+.arena-option.is-correct{border-color:#5b9a72;background:#edf8f0}
+.arena-option.is-correct .arena-option-letter{background:#d2ebd9;color:#23643a}
+.arena-option.is-wrong{border-color:#d68b7b;background:#fff0ec}
+.arena-option.is-wrong .arena-option-letter{background:#f9d9d1;color:#a12e1c}
+.arena-option.is-hidden{visibility:hidden;pointer-events:none}
+.arena-feedback{min-height:46px;padding:14px 2px 8px;color:var(--arena-muted);font-size:12px;line-height:1.7}
+.arena-feedback.is-correct{color:#267342;font-weight:700}
+.arena-feedback.is-wrong{color:#a84230;font-weight:700}
+.arena-controls{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:10px}
+.arena-hint{border:1px solid var(--arena-line);background:#fff;color:#42544a}
+.arena-next{margin-left:auto}
+.arena-result-icon{margin-bottom:15px;font-size:48px}
+.arena-final-score{display:flex;flex-direction:column;align-items:center;gap:9px;margin:28px 0 22px;padding:25px;border:1px solid #e4ddcd;border-radius:16px;background:#f9f6ef}
+.arena-final-score strong{font-size:clamp(40px,8vw,58px);line-height:1.1;letter-spacing:-2px}
+.arena-final-score>span{color:#8d7442;font-size:12px}
+.arena-result-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}
+.arena-result-stats>div{padding:17px 10px;border:1px solid var(--arena-line);border-radius:12px}
+.arena-result-stats strong{font-size:23px}
+.arena-share{width:100%;margin-top:10px;border:1px solid var(--arena-line);background:#fff;color:var(--arena-ink)}
+.arena-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:18px;color:#829087;font-size:9px;font-weight:800;letter-spacing:1.2px}
+.legal-arena [hidden]{display:none!important}
+
+.arena-review{margin-top:32px;padding-top:28px;border-top:1px solid #e5e9e5;text-align:left}
+.arena-review-title{margin:0 0 7px;font-size:22px;letter-spacing:-.5px}
+.arena-review-subtitle{margin:0 0 20px;color:#728078;font-size:12px;line-height:1.7}
+.arena-review-summary{margin-bottom:17px;padding:13px 15px;border:1px solid #e5e9e5;border-radius:11px;background:#f8faf8;font-size:12px;font-weight:800}
+.arena-review-card{margin-top:13px;padding:18px;border:1px solid #e3e8e3;border-left:4px solid #829b88;border-radius:13px;background:#fff}
+.arena-review-card.review-wrong{border-left-color:#c87564}
+.arena-review-card.review-correct{border-left-color:#4d9668}
+.arena-review-card-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:9px}
+.arena-review-index{color:#7a867d;font-size:10px;font-weight:800;letter-spacing:.7px}
+.arena-review-status{font-size:10px;font-weight:800;color:#33774b}
+.review-wrong .arena-review-status{color:#b44b37}
+.arena-review-card h4{margin:15px 0 13px;font-size:15px;line-height:1.65}
+.arena-review-line{margin:8px 0;font-size:12px;line-height:1.7;overflow-wrap:anywhere}
+.arena-review-line.review-answer{color:#267342;font-weight:700}
+.arena-review-explanation{margin:14px 0 0;padding:13px;border-radius:9px;background:#f6f7f4;color:#536057;font-size:12px;line-height:1.8;overflow-wrap:anywhere}
+
+@media(max-width:800px){.top{align-items:flex-start;flex-direction:column}.hero{padding:55px 6%;min-height:auto}.photo{width:220px;height:220px}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){
+ nav{justify-content:flex-start}
+ .hero{flex-direction:column;align-items:flex-start}
+ .photo{align-self:center}
+ .cards{grid-template-columns:1fr}
+ .notice{flex-direction:column;align-items:flex-start}
+ .legal-arena{margin-top:35px;padding:17px;border-radius:18px}
+ .arena-top{align-items:flex-start}
+ .arena-top p{font-size:12px}
+ .arena-emblem{width:53px;height:53px;border-radius:15px;font-size:31px}
+ .arena-panel{padding:20px 15px}
+ .arena-stats{margin:23px 0}
+ .arena-stats strong{font-size:19px}
+ .arena-stats small{font-size:8px;letter-spacing:.4px}
+ .arena-question-box{padding:16px 12px}
+ .arena-options{grid-template-columns:1fr;gap:9px}
+ .arena-option{min-height:51px}
+ .arena-score-row{gap:7px}
+ .arena-score-row>div{padding:10px 8px}
+ .arena-score-row strong{font-size:18px}
+ .arena-score-row small{font-size:8px;letter-spacing:.5px}
+ .arena-controls{align-items:stretch;flex-wrap:wrap}
+ .arena-hint,.arena-next{flex:1;padding:0 10px;font-size:10px}
+ .arena-bottom{font-size:8px}
+ .arena-review-card{padding:14px}
+ .arena-review-card h4{font-size:14px}
 }
 
 </style>
@@ -62,3 +217,104 @@
       <div class="arena-icon" aria-hidden="true">⚖️</div>
       <span class="arena-tag">THE LAW CHALLENGE</span>
       <h3>Siap jadi <span>Master Hukum?</span></h3>
+      <p>Hadapi 10 pertanyaan acak dari bank soal hukum dan logika. Waktu terbatas, combo menambah poin, dan setiap soal punya pembahasan.</p>
+      <div class="arena-stats">
+        <div><strong>50+</strong><small>BANK SOAL</small></div>
+        <div><strong>15s</strong><small>PER SOAL</small></div>
+        <div><strong>2.250</strong><small>SKOR MAKS.</small></div>
+      </div>
+      <button class="arena-btn" id="arena-start" type="button">MULAI TANTANGAN <span>→</span></button>
+      <p class="arena-footnote">Tidak perlu login. Langsung main.</p>
+    </div>
+
+    <div class="arena-game" id="arena-game" hidden>
+      <div class="arena-game-head">
+        <span id="arena-number">SOAL 01 / 10</span>
+        <span class="arena-timer" id="arena-timer">15s</span>
+      </div>
+      <div class="arena-progress"><div id="arena-progress-fill"></div></div>
+      <div class="arena-score-row">
+        <div><small>SKOR</small><strong id="arena-score">0</strong></div>
+        <div><small>COMBO</small><strong id="arena-combo">×0</strong></div>
+        <div><small>REKOR</small><strong id="arena-best">0</strong></div>
+      </div>
+      <div class="arena-question-box">
+        <span class="arena-question-label" id="arena-category">DASAR HUKUM</span>
+        <h3 id="arena-question">Pertanyaan muncul di sini.</h3>
+        <div class="arena-options" id="arena-options"></div>
+      </div>
+      <div class="arena-feedback" id="arena-feedback" aria-live="polite">Pilih jawaban yang menurutmu paling tepat.</div>
+      <div class="arena-controls">
+        <button class="arena-hint" id="arena-hint" type="button">💡 Bantuan 50:50</button>
+        <button class="arena-btn arena-next" id="arena-next" type="button" disabled>BERIKUTNYA →</button>
+      </div>
+    </div>
+
+    <div class="arena-result" id="arena-result" hidden>
+      <div class="arena-result-icon" id="arena-result-icon">🏆</div>
+      <span class="arena-tag">CHALLENGE COMPLETED</span>
+      <h3 id="arena-result-title">Tantangan Selesai!</h3>
+      <p id="arena-result-desc">Hasil permainanmu.</p>
+      <div class="arena-final-score">
+        <small>TOTAL SKOR</small>
+        <strong id="arena-final-score">0</strong>
+        <span id="arena-best-result">Rekor: 0</span>
+      </div>
+      <div class="arena-result-stats">
+        <div><strong id="arena-correct">0/10</strong><small>JAWABAN BENAR</small></div>
+        <div><strong id="arena-accuracy">0%</strong><small>AKURASI</small></div>
+      </div>
+      <button class="arena-btn" id="arena-restart" type="button">MAIN LAGI ↻</button>
+      <button class="arena-share" id="arena-share" type="button">SALIN HASIL PERMAINAN</button>
+      <p class="arena-footnote" id="arena-share-status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div class="arena-bottom">
+    <span>LEGAL ARENA / FH 01</span>
+    <span>THINK SHARP. KNOW THE LAW.</span>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 FH 01 ANGKATAN 2026 • Fakultas Hukum</footer>
+
+<script>
+// Efek transisi navigasi yang aman: tidak menghalangi tautan eksternal atau tab baru.
+document.querySelectorAll('a[href]').forEach(a => {
+  a.addEventListener('click', () => {
+    if (a.target !== '_blank' && a.origin === window.location.origin) {
+      document.body.classList.add('leaving');
+    }
+  });
+});
+
+/* ==========================================================
+   LEGAL ARENA — FH 01
+   Format soal: [kategori, pertanyaan, JAWABAN BENAR, salah1, salah2, salah3, pembahasan]
+   Urutan opsi diacak otomatis setiap ronde.
+========================================================== */
+(() => {
+  "use strict";
+  const root = document.getElementById("legal-arena");
+  if (!root || root.dataset.initialized === "true") return;
+  root.dataset.initialized = "true";
+
+  const $ = id => document.getElementById(id);
+  const ui = {
+    intro: $("arena-intro"), game: $("arena-game"), result: $("arena-result"),
+    start: $("arena-start"), restart: $("arena-restart"), next: $("arena-next"),
+    hint: $("arena-hint"), number: $("arena-number"), timer: $("arena-timer"),
+    progress: $("arena-progress-fill"), score: $("arena-score"),
+    combo: $("arena-combo"), best: $("arena-best"), category: $("arena-category"),
+    question: $("arena-question"), options: $("arena-options"),
+    feedback: $("arena-feedback"), resultIcon: $("arena-result-icon"),
+    resultTitle: $("arena-result-title"), resultDesc: $("arena-result-desc"),
+    finalScore: $("arena-final-score"), bestResult: $("arena-best-result"),
+    correct: $("arena-correct"), accuracy: $("arena-accuracy"),
+    share: $("arena-share"), shareStatus: $("arena-share-status")
+  };
+
+  const BANK = [
+    ["Dasar Hukum", "Apa fungsi umum hukum dalam masyarakat?", "Mengatur kehidupan bersama dan menyelesaikan konflik", "Menggantikan seluruh norma sosial", "Memastikan semua orang selalu sepakat", "Memberi kebebasan tanpa batas", "Hukum membantu mengatur kehidupan bersama, memberi kepastian, dan menyediakan mekanisme penyelesaian konflik."],
+    ["Konstitusi", "UUD Negara Republik Indonesia Tahun 1945 berkedudukan sebagai ...", "Hukum dasar tertulis negara", "Peraturan desa", "Keputusan pengadilan biasa", "
