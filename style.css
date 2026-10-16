@@ -57,6 +57,79 @@ th,td{text-align:left;padding:17px;border-bottom:1px solid #eee}
 th{background:#a00000;color:#fff}
 tr:last-child td{border:0}
 
+
+/* ARSIP TUGAS */
+.arsip-tugas {
+    margin-top: 28px;
+    border: 1px solid #e5b7b7;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.arsip-tugas summary {
+    padding: 18px;
+    background: #a00000;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.arsip-tugas summary::-webkit-details-marker {
+    display: none;
+}
+
+.arsip-tugas summary::after {
+    content: "+";
+    font-size: 24px;
+    line-height: 1;
+}
+
+.arsip-tugas[open] summary::after {
+    content: "−";
+}
+
+.arsip-tugas summary:hover {
+    background: #800000;
+}
+
+.arsip-tugas .isi-arsip {
+    padding: 16px;
+}
+
+.arsip-tugas .isi-arsip article {
+    margin-bottom: 22px;
+}
+
+.arsip-tugas .isi-arsip article:last-child {
+    margin-bottom: 0;
+}
+
+.tugas-terbaru {
+    border: 1px solid #a00000;
+    border-left: 5px solid #a00000;
+    padding: 18px;
+    border-radius: 8px;
+    background: rgba(160, 0, 0, 0.04);
+}
+
+@media (max-width: 600px) {
+    .arsip-tugas summary {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .arsip-tugas .isi-arsip {
+        padding: 12px;
+    }
+}
+
+
 /* TABEL JADWAL FH 01 */
 .schedule-table{
   width:100%;
