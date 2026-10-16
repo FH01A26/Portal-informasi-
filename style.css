@@ -124,12 +124,22 @@ tr:last-child td{border:0}
 }
 
 /* SABTU - UNGU */
-.schedule-table .sabtu tr:not(.day-title) td{
-  background:#f5f3ff;
+.schedule-table tbody.sabtu tr.day-title td {
+  background-color: #6d28d9 !important;
+  color: #ffffff !important;
 }
-.schedule-table .sabtu .day-title td{
-  background:#6d28d9;
-  color:white;
+
+.schedule-table tbody.sabtu tr:not(.day-title) td {
+  background-color: #f5f3ff !important;
+  color: #171717 !important;
+}
+
+.schedule-table tbody.sabtu tr.day-title td:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+.schedule-table tbody.sabtu tr.day-title td:last-child {
+  border-radius: 0 8px 0 0;
 }
 
 /* JARAK ANTARHARI */
