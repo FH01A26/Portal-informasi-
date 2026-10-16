@@ -1,83 +1,66 @@
+
 <!doctype html>
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tugas • FH 01</title>
 <link rel="stylesheet" href="style.css">
 
 <style>
 .daftar-tugas {
-    margin: 12px 0 0 0;
+    margin: 12px 0 0;
     padding-left: 25px;
     line-height: 1.6;
 }
-
 .daftar-tugas li {
     margin-bottom: 7px;
 }
-
 .list article {
     margin-bottom: 25px;
     overflow: hidden;
     box-sizing: border-box;
 }
-
 .list article p {
     line-height: 1.6;
-    word-wrap: break-word;
     overflow-wrap: break-word;
 }
-
+.list article h3 {
+    margin-bottom: 10px;
+}
 .catatan {
     margin-top: 12px;
     padding: 10px 12px;
     border-left: 3px solid #a00000;
     line-height: 1.6;
 }
-
-.list article h3 {
-    margin-bottom: 10px;
-}
-
 .tugas-panjang {
     line-height: 1.7;
 }
-
-/* Tugas baru */
-.tugas-baru {
+.tugas-terbaru {
     border: 1px solid #a00000;
     border-left: 5px solid #a00000;
     padding: 18px;
     border-radius: 8px;
     background: rgba(160, 0, 0, 0.04);
 }
-
-.badge-baru {
-    display: inline-block;
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    background: #a00000;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-/* Belum dikumpul */
+.badge-baru,
 .badge-belum {
     display: inline-block;
     margin-bottom: 10px;
     padding: 5px 10px;
     border-radius: 20px;
-    background: #555;
     color: #fff;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
-
+.badge-baru {
+    background: #a00000;
+}
+.badge-belum {
+    background: #287444;
+}
 .deadline {
     margin-top: 12px;
     padding: 10px 12px;
@@ -85,533 +68,286 @@
     font-weight: 600;
 }
 
-.pemisah {
-    margin: 35px 0 25px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #a00000;
-    color: #a00000;
+/* ARSIP TUGAS */
+.arsip-tugas {
+    margin-top: 28px;
+    border: 1px solid #e5b7b7;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+.arsip-tugas summary {
+    padding: 18px;
+    background: #a00000;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.arsip-tugas summary::-webkit-details-marker {
+    display: none;
+}
+.arsip-tugas summary::after {
+    content: "+";
+    font-size: 24px;
+    line-height: 1;
+}
+.arsip-tugas[open] summary::after {
+    content: "−";
+}
+.arsip-tugas summary:hover {
+    background: #800000;
+}
+.arsip-tugas .isi-arsip {
+    padding: 16px;
+}
+.arsip-tugas .isi-arsip article {
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #fff;
+}
+.arsip-tugas .isi-arsip article:last-child {
+    margin-bottom: 0;
+}
+@media (max-width: 600px) {
+    .arsip-tugas summary {
+        padding: 15px;
+        font-size: 14px;
+    }
+    .arsip-tugas .isi-arsip {
+        padding: 10px;
+    }
+    .arsip-tugas .isi-arsip article {
+        padding: 13px;
+    }
 }
 </style>
-
 </head>
 
 <body>
 
 <header class="top">
-
-<div class="brand">
-<div class="logo">
-<img src="assets/logo.jpg" alt="Logo FH 01">
-</div>
-
-<div>
-<b>FH 01</b>
-<small>ANGKATAN 2026</small>
-</div>
-</div>
-
-<nav>
-<a href="index.html">Dashboard</a>
-<a href="jadwal.html">Jadwal</a>
-<a href="dosen.html">Dosen</a>
-<a class="active" href="tugas.html">Tugas</a>
-<a href="pengumuman.html">Info</a>
-<a href="struktur.html">Struktur</a>
-</nav>
-
-</header>
-
-
-<main class="page">
-
-<span class="eyebrow">AKADEMIK</span>
-
-<h1>Tugas & Deadline</h1>
-
-<div class="list">
-
-
-<!-- ========================= -->
-<!-- TUGAS BARU -->
-<!-- ========================= -->
-
-<!-- KEWARGANEGARAAN -->
-
-<article class="tugas-baru">
-
-<span class="badge-baru">‼️ TUGAS BARU</span>
-
-<span class="date">UTS • KEWARGANEGARAAN</span>
-
-<h3>Pendidikan Kewarganegaraan dan Anti Korupsi</h3>
-
-<p class="tugas-panjang">
-<strong>
-Pendidikan kewarganegaraan dan anti korupsi dalam kehidupan B3
-(bermasyarakat, berbangsa, bernegara).
-</strong>
-</p>
-
-<div class="catatan">
-<strong>Ketentuan:</strong>
-
-<ul class="daftar-tugas">
-<li>Diketik.</li>
-<li>Menggunakan kertas A4.</li>
-<li>Spasi 1,5.</li>
-<li>Tidak menggunakan cover.</li>
-<li>dalam bentuk <strong>makalah</strong>.</li>
-</ul>
-</div>
-
-</article>
-
-
-<!-- ILMU NEGARA -->
-
-<article class="tugas-baru">
-
-<span class="badge-baru">‼️ TUGAS BARU</span>
-
-<span class="date">TUGAS • ILMU NEGARA</span>
-
-<h3>Soal Pemahaman Konsep</h3>
-
-<ol class="daftar-tugas">
-
-<li>
-Jelaskan empat unsur konstitutif negara menurut Konvensi Montevideo 1933!
-</li>
-
-<li>
-Uraikan perbedaan antara teori deklaratif dan teori konstitutif dalam pengakuan negara!
-</li>
-
-<li>
-Sebutkan dan jelaskan enam sebab utama lenyapnya negara!
-</li>
-
-<li>
-Jelaskan perbedaan antara teori terjadinya negara secara primer dan secara sekunder!
-</li>
-
-<li>
-Apa yang dimaksud dengan <strong>continuator state</strong> dan
-<strong>successor state</strong>? Berikan masing-masing satu contoh!
-</li>
-
-</ol>
-
-<h3>Studi Kasus dan Analisis</h3>
-
-<p class="tugas-panjang">
-<strong>7.2 Studi Kasus dan Analisis</strong>
-</p>
-
-<p>
-Pilih <strong>satu</strong> studi kasus untuk dianalisis secara sederhana sesuai dengan materi Ilmu Negara.
-</p>
-
-<div class="catatan">
-<strong>Ketentuan:</strong>
-
-<ul class="daftar-tugas">
-<li>Dikerjakan di <strong>folio bergaris</strong>.</li>
-<li>Ditulis tangan.</li>
-</ul>
-</div>
-
-<div class="deadline">
-<strong>Batas kumpul: Jam Ilmu Negara.</strong>
-</div>
-
-</article>
-<!-- UAS ETNOGRAFI PAPUA -->
-
-<article class="tugas-baru">
-
-<span class="badge-baru">‼️ TUGAS BARU</span>
-
-<span class="date">TUGAS UAS • ETNOGRAFI PAPUA</span>
-
-<h3>Kerangka Etnografi sebagai Fokus Kebudayaan di Papua</h3>
-
-<p class="tugas-panjang">
-<strong>
-Rumuskan kerangka etnografi sebagai fokus kebudayaan di Papua.
-</strong>
-</p>
-
-<p class="tugas-panjang">
-<strong>9 unsur kebudayaan.</strong>
-</p>
-
-<div class="catatan">
-<strong>Ketentuan:</strong>
-
-<ul class="daftar-tugas">
-<li>Tidak menggunakan sampul.</li>
-<li>Tidak perlu dijilid.</li>
-</ul>
-</div>
-
-<div class="deadline">
-<strong>Kumpul terakhir.</strong>
-</div>
-
-</article>
-
-
-<!-- ========================= -->
-<!-- TUGAS BELUM DIKUMPUL -->
-<!-- ========================= -->
-
-<h2 class="pemisah">Tugas Belum Dikumpul</h2>
-
-
-<!-- PHI -->
-
-<article>
-
-<span class="badge-belum">BELUM DIKUMPUL</span>
-
-<span class="date">TUGAS • PENGANTAR HUKUM INDONESIA</span>
-
-<h3>Tugas Pengantar Hukum Indonesia</h3>
-
-<p class="tugas-panjang">
-<strong>
-Rumuskan apa saja yang menjadi kekuatan berlakunya hukum positif di Indonesia.
-</strong>
-</p>
-
-<div class="catatan">
-<strong>Ketentuan:</strong>
-
-<ul class="daftar-tugas">
-<li>Diketik.</li>
-<li>Diprint menggunakan kertas A4.</li>
-</ul>
-
-</div>
-
-</article>
-
-
-<!-- PIH 15 SEPTEMBER -->
-
-<article>
-
-<span class="badge-belum">BELUM DIKUMPUL</span>
-
-<span class="date">TUGAS PIH • SELASA, 15 SEPTEMBER 2026</span>
-
-<h3>Tugas Pengantar Ilmu Hukum</h3>
-
-<p class="tugas-panjang">
-<strong>Apa yang saudara ketahui tentang:</strong>
-</p>
-
-<ol class="daftar-tugas">
-
-<li>
-Mengapa hukum disebut <strong>TIDAK NETRAL</strong> dan
-<strong>TIDAK BERDIRI SENDIRI</strong>?
-</li>
-
-<li>
-Uraikan secara singkat subjek hukum dan objek hukum disertai contoh masing-masing.
-</li>
-
-<li>
-Hak dan kewajiban disertai contoh masing-masing.
-</li>
-
-<li>
-Hubungan subjek hukum, objek hukum, hak dan kewajiban.
-</li>
-
-<li>
-
-<div class="list">
-
-<!-- TUGAS TERBARU -->
-<article class="tugas-terbaru">
-
-    <span class="badge-baru">‼️ TUGAS TERBARU</span>
-    <span class="date">TUGAS • BAHASA INDONESIA</span>
-
-    <h3>Merangkum Modul 1</h3>
-
-    <p class="tugas-panjang">
-        Merangkum materi <strong>Modul 1</strong>.
-    </p>
-
-    <div class="catatan">
-        <strong>Ketentuan:</strong>
-        <ul class="daftar-tugas">
-            <li>Materi modul tersedia di grup kelas.</li>
-            <li>Ditulis di kertas folio bergaris.</li>
-        </ul>
+    <div class="brand">
+        <div class="logo">
+            <img src="assets/logo.jpg" alt="Logo FH 01">
+        </div>
+        <div>
+            <b>FH 01</b>
+            <small>ANGKATAN 2026</small>
+        </div>
     </div>
 
-</article>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="jadwal.html">Jadwal</a>
+        <a href="dosen.html">Dosen</a>
+        <a class="active" href="tugas.html">Tugas</a>
+        <a href="pengumuman.html">Info</a>
+        <a href="struktur.html">Struktur</a>
+    </nav>
+</header>
 
+<main class="page">
+    <span class="eyebrow">AKADEMIK</span>
+    <h1>Tugas &amp; Deadline</h1>
 
-<!-- ARSIP TUGAS: KLIK UNTUK MEMBUKA -->
-<details class="arsip-tugas">
+    <div class="list">
 
-    <summary>ARSIP TUGAS</summary>
+        <!-- SATU-SATUNYA TUGAS BARU -->
+        <article class="tugas-terbaru">
+            <span class="badge-baru">‼️ TUGAS BARU</span>
+            <span class="date">TUGAS • BAHASA INDONESIA</span>
 
-    <div class="isi-arsip">
-
-        <!-- KEWARGANEGARAAN -->
-        <article class="tugas-baru">
-
-            <span class="badge-baru">TUGAS BARU</span>
-            <span class="date">UTS • KEWARGANEGARAAN</span>
-
-            <h3>Pendidikan Kewarganegaraan dan Anti Korupsi</h3>
+            <h3>Merangkum Modul 1</h3>
 
             <p class="tugas-panjang">
-                <strong>
-                    Pendidikan kewarganegaraan dan anti korupsi
-                    dalam kehidupan B3 (bermasyarakat, berbangsa,
-                    bernegara).
-                </strong>
+                Merangkum materi <strong>Modul 1</strong>.
             </p>
 
             <div class="catatan">
                 <strong>Ketentuan:</strong>
                 <ul class="daftar-tugas">
-                    <li>Diketik.</li>
-                    <li>Menggunakan kertas A4.</li>
-                    <li>Spasi 1,5.</li>
-                    <li>Tidak menggunakan cover.</li>
-                    <li>Dalam bentuk makalah.</li>
+                    <li>File modul tersedia di grup kelas.</li>
+                    <li>Ditulis di kertas folio bergaris.</li>
                 </ul>
             </div>
-
         </article>
 
+        <!-- SEMUA TUGAS LAMA DISIMPAN DI SINI -->
+        <details class="arsip-tugas">
+            <summary>ARSIP TUGAS</summary>
 
-        <!-- ILMU NEGARA -->
-        <article class="tugas-baru">
+            <div class="isi-arsip">
 
-            <span class="badge-baru">TUGAS BARU</span>
-            <span class="date">TUGAS • ILMU NEGARA</span>
+                <!-- KEWARGANEGARAAN -->
+                <article>
+                    <span class="badge-belum">SUDAH DIKUMPUL</span>
+                    <span class="date">UTS • KEWARGANEGARAAN</span>
 
-            <h3>Soal Pemahaman Konsep</h3>
+                    <h3>Pendidikan Kewarganegaraan dan Anti Korupsi</h3>
 
-            <ol class="daftar-tugas">
-                <li>
-                    Jelaskan empat unsur konstitutif negara menurut
-                    Konvensi Montevideo 1933!
-                </li>
-                <li>
-                    Uraikan perbedaan antara teori deklaratif dan teori
-                    konstitutif dalam pengakuan negara!
-                </li>
-                <li>
+                    <p class="tugas-panjang">
+                        <strong>
+                            Pendidikan kewarganegaraan dan anti korupsi
+                            dalam kehidupan B3 (bermasyarakat, berbangsa,
+                            bernegara).
+                        </strong>
+                    </p>
 
-<div class="list">
+                    <div class="catatan">
+                        <strong>Ketentuan:</strong>
+                        <ul class="daftar-tugas">
+                            <li>Diketik.</li>
+                            <li>Menggunakan kertas A4.</li>
+                            <li>Spasi 1,5.</li>
+                            <li>Tidak menggunakan cover.</li>
+                            <li>Dalam bentuk makalah.</li>
+                        </ul>
+                    </div>
+                </article>
 
-    <!-- TUGAS TERBARU: BAHASA INDONESIA -->
-    <article class="tugas-terbaru">
-        <span class="badge-baru">‼️ TUGAS BARU</span>
-        <span class="date">TUGAS • BAHASA INDONESIA</span>
+                <!-- ILMU NEGARA -->
+                <article>
+                    <span class="badge-belum">SUDAH DIKUMPUL</span>
+                    <span class="date">TUGAS • ILMU NEGARA</span>
 
-        <h3>Merangkum Modul 1</h3>
+                    <h3>Soal Pemahaman Konsep</h3>
 
-        <p class="tugas-panjang">
-            Merangkum materi <strong>Modul 1</strong>.
-        </p>
+                    <ol class="daftar-tugas">
+                        <li>Jelaskan empat unsur konstitutif negara menurut Konvensi Montevideo 1933!</li>
+                        <li>Uraikan perbedaan antara teori deklaratif dan teori konstitutif dalam pengakuan negara!</li>
+                        <li>Sebutkan dan jelaskan enam sebab utama lenyapnya negara!</li>
+                        <li>Jelaskan perbedaan antara teori terjadinya negara secara primer dan secara sekunder!</li>
+                        <li>Apa yang dimaksud dengan <strong>continuator state</strong> dan <strong>successor state</strong>? Berikan masing-masing satu contoh!</li>
+                    </ol>
 
-        <div class="catatan">
-            <strong>Ketentuan:</strong>
-            <ul class="daftar-tugas">
-                <li>File modul tersedia di grup kelas.</li>
-                <li>Ditulis di kertas folio bergaris.</li>
-            </ul>
-        </div>
-    </article>
+                    <h3>Studi Kasus dan Analisis</h3>
+                    <p><strong>7.2 Studi Kasus dan Analisis</strong></p>
+                    <p>Pilih satu studi kasus untuk dianalisis secara sederhana sesuai dengan materi Ilmu Negara.</p>
 
+                    <div class="catatan">
+                        <strong>Ketentuan:</strong>
+                        <ul class="daftar-tugas">
+                            <li>Dikerjakan di folio bergaris.</li>
+                            <li>Ditulis tangan.</li>
+                        </ul>
+                    </div>
 
-    <!-- ARSIP TUGAS -->
-    <details class="arsip-tugas">
-        <summary>ARSIP TUGAS</summary>
+                    <div class="deadline">
+                        <strong>Batas kumpul: Jam Ilmu Negara.</strong>
+                    </div>
+                </article>
 
-        <div class="isi-arsip">
+                <!-- ETNOGRAFI PAPUA -->
+                <article>
+                    <span class="badge-belum">SUDAH DIKUMPUL</span>
+                    <span class="date">TUGAS UAS • ETNOGRAFI PAPUA</span>
 
-            <!-- KEWARGANEGARAAN -->
-            <article>
-                <span class="badge-belum">SUDAH DIKUMPUL</span>
-                <span class="date">UTS • KEWARGANEGARAAN</span>
+                    <h3>Kerangka Etnografi sebagai Fokus Kebudayaan di Papua</h3>
 
-                <h3>Pendidikan Kewarganegaraan dan Anti Korupsi</h3>
+                    <p class="tugas-panjang">
+                        <strong>
+                            Rumuskan kerangka etnografi sebagai fokus
+                            kebudayaan di Papua.
+                        </strong>
+                    </p>
 
-                <p>
-                    <strong>
-                        Pendidikan kewarganegaraan dan anti korupsi
-                        dalam kehidupan B3 (bermasyarakat, berbangsa,
-                        bernegara).
-                    </strong>
-                </p>
+                    <p><strong>9 unsur kebudayaan.</strong></p>
 
-                <div class="catatan">
-                    <strong>Ketentuan:</strong>
-                    <ul class="daftar-tugas">
-                        <li>Diketik.</li>
-                        <li>Menggunakan kertas A4.</li>
-                        <li>Spasi 1,5.</li>
-                        <li>Tidak menggunakan cover.</li>
-                        <li>Dalam bentuk makalah.</li>
-                    </ul>
-                </div>
-            </article>
+                    <div class="catatan">
+                        <strong>Ketentuan:</strong>
+                        <ul class="daftar-tugas">
+                            <li>Tidak menggunakan sampul.</li>
+                            <li>Tidak perlu dijilid.</li>
+                        </ul>
+                    </div>
 
+                    <div class="deadline">
+                        <strong>Kumpul terakhir.</strong>
+                    </div>
+                </article>
 
-            <!-- ILMU NEGARA -->
-            <article>
-                <span class="badge-belum">SUDAH DIKUMPUL</span>
-                <span class="date">TUGAS • ILMU NEGARA</span>
+                <!-- PENGANTAR HUKUM INDONESIA -->
+                <article>
+                    <span class="badge-belum">SUDAH DIKUMPUL</span>
+                    <span class="date">TUGAS • PENGANTAR HUKUM INDONESIA</span>
 
-                <h3>Soal Pemahaman Konsep</h3>
+                    <h3>Tugas Pengantar Hukum Indonesia</h3>
 
-                <ol class="daftar-tugas">
-                    <li>Jelaskan empat unsur konstitutif negara menurut Konvensi Montevideo 1933!</li>
-                    <li>Uraikan perbedaan antara teori deklaratif dan teori konstitutif dalam pengakuan negara!</li>
-                    <li>Sebutkan dan jelaskan enam sebab utama lenyapnya negara!</li>
-                    <li>Jelaskan perbedaan antara teori terjadinya negara secara primer dan secara sekunder!</li>
-                    <li>Apa yang dimaksud dengan <strong>continuator state</strong> dan <strong>successor state</strong>? Berikan masing-masing satu contoh!</li>
-                </ol>
+                    <p class="tugas-panjang">
+                        <strong>
+                            Rumuskan apa saja yang menjadi kekuatan
+                            berlakunya hukum positif di Indonesia.
+                        </strong>
+                    </p>
 
-                <h3>Studi Kasus dan Analisis</h3>
-                <p><strong>7.2 Studi Kasus dan Analisis</strong></p>
-                <p>Pilih satu studi kasus untuk dianalisis secara sederhana sesuai dengan materi Ilmu Negara.</p>
+                    <div class="catatan">
+                        <strong>Ketentuan:</strong>
+                        <ul class="daftar-tugas">
+                            <li>Diketik.</li>
+                            <li>Diprint menggunakan kertas A4.</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <div class="catatan">
-                    <strong>Ketentuan:</strong>
-                    <ul class="daftar-tugas">
-                        <li>Dikerjakan di folio bergaris.</li>
-                        <li>Ditulis tangan.</li>
-                    </ul>
-                </div>
+                <!-- PENGANTAR ILMU HUKUM -->
+                <article>
+                    <span class="badge-belum">SUDAH DIKUMPUL</span>
+                    <span class="date">TUGAS PIH • SELASA, 15 SEPTEMBER 2026</span>
 
-                <div class="deadline">
-                    <strong>Batas kumpul: Jam Ilmu Negara.</strong>
-                </div>
-            </article>
+                    <h3>Tugas Pengantar Ilmu Hukum</h3>
 
+                    <p><strong>Apa yang saudara ketahui tentang:</strong></p>
 
-            <!-- ETNOGRAFI PAPUA -->
-            <article>
-                <span class="badge-belum">SUDAH DIKUMPUL</span>
-                <span class="date">TUGAS UAS • ETNOGRAFI PAPUA</span>
+                    <ol class="daftar-tugas">
+                        <li>Mengapa hukum disebut <strong>TIDAK NETRAL</strong> dan <strong>TIDAK BERDIRI SENDIRI</strong>?</li>
+                        <li>Uraikan secara singkat subjek hukum dan objek hukum disertai contoh masing-masing.</li>
+                        <li>Hak dan kewajiban disertai contoh masing-masing.</li>
+                        <li>Hubungan subjek hukum, objek hukum, hak dan kewajiban.</li>
+                        <li>Analisis kasus bebas: siapa subjek hukum, apa objek hukum, apa hak dan kewajiban para pihak, serta akibat hukum apabila salah satu pihak tidak memenuhi kewajibannya.</li>
+                    </ol>
 
-                <h3>Kerangka Etnografi sebagai Fokus Kebudayaan di Papua</h3>
+                    <div class="catatan">
+                        <strong>Catatan:</strong>
+                        Argumentatif dan bisa menggunakan produk hukum.
+                    </div>
+                </article>
 
-                <p>
-                    <strong>Rumuskan kerangka etnografi sebagai fokus kebudayaan di Papua.</strong>
-                </p>
-                <p><strong>9 unsur kebudayaan.</strong></p>
+                <!-- PANCASILA -->
+                <article>
+                    <span class="badge-belum">SUDAH DIKUMPUL</span>
+                    <span class="date">TUGAS HARIAN • SELASA, 15 SEPTEMBER 2026</span>
 
-                <div class="catatan">
-                    <strong>Ketentuan:</strong>
-                    <ul class="daftar-tugas">
-                        <li>Tidak menggunakan sampul.</li>
-                        <li>Tidak perlu dijilid.</li>
-                    </ul>
-                </div>
+                    <h3>Tugas Harian Pancasila FH01 Semester 1</h3>
 
-                <div class="deadline">
-                    <strong>Kumpul terakhir.</strong>
-                </div>
-            </article>
+                    <p><strong>Selasa, 15 September 2026.</strong></p>
+                    <p><strong>TUGAS HARIAN</strong></p>
 
+                    <p class="tugas-panjang">
+                        Peran mahasiswa dalam menjabarkan butir-butir
+                        Pancasila melalui lima sila dalam kehidupan B3
+                        (bermasyarakat, berbangsa dan bernegara) di kampus.
+                    </p>
 
-            <!-- PENGANTAR HUKUM INDONESIA -->
-            <article>
-                <span class="badge-belum">SUDAH DIKUMPUL</span>
-                <span class="date">TUGAS • PENGANTAR HUKUM INDONESIA</span>
+                    <div class="catatan">
+                        <strong>Ketentuan:</strong>
+                        <p>Di kertas A4 dengan spasi 1,5.</p>
+                    </div>
+                </article>
 
-                <h3>Tugas Pengantar Hukum Indonesia</h3>
+            </div>
+        </details>
 
-                <p>
-                    <strong>
-                        Rumuskan apa saja yang menjadi kekuatan berlakunya
-                        hukum positif di Indonesia.
-                    </strong>
-                </p>
-
-                <div class="catatan">
-                    <strong>Ketentuan:</strong>
-                    <ul class="daftar-tugas">
-                        <li>Diketik.</li>
-                        <li>Diprint menggunakan kertas A4.</li>
-                    </ul>
-                </div>
-            </article>
-
-
-            <!-- PENGANTAR ILMU HUKUM -->
-            <article>
-                <span class="badge-belum">SUDAH DIKUMPUL</span>
-                <span class="date">TUGAS PIH • SELASA, 15 SEPTEMBER 2026</span>
-
-                <h3>Tugas Pengantar Ilmu Hukum</h3>
-
-                <p><strong>Apa yang saudara ketahui tentang:</strong></p>
-
-                <ol class="daftar-tugas">
-                    <li>Mengapa hukum disebut <strong>TIDAK NETRAL</strong> dan <strong>TIDAK BERDIRI SENDIRI</strong>?</li>
-                    <li>Uraikan secara singkat subjek hukum dan objek hukum disertai contoh masing-masing.</li>
-                    <li>Hak dan kewajiban disertai contoh masing-masing.</li>
-                    <li>Hubungan subjek hukum, objek hukum, hak dan kewajiban.</li>
-                    <li>Analisis kasus bebas: subjek hukum, objek hukum, hak dan kewajiban para pihak, serta akibat hukum jika salah satu pihak tidak memenuhi kewajibannya.</li>
-                </ol>
-
-                <div class="catatan">
-                    <strong>Catatan:</strong>
-                    Argumentatif dan bisa menggunakan produk hukum.
-                </div>
-            </article>
-
-
-            <!-- PANCASILA -->
-            <article>
-                <span class="badge-belum">SUDAH DIKUMPUL</span>
-                <span class="date">TUGAS HARIAN • SELASA, 15 SEPTEMBER 2026</span>
-
-                <h3>Tugas Harian Pancasila FH01 Semester 1</h3>
-
-                <p><strong>Selasa, 15 September 2026.</strong></p>
-                <p><strong>TUGAS HARIAN</strong></p>
-
-                <p class="tugas-panjang">
-                    Peran mahasiswa dalam menjabarkan butir-butir Pancasila
-                    melalui lima sila dalam kehidupan B3 (bermasyarakat,
-                    berbangsa dan bernegara) di kampus.
-                </p>
-
-                <div class="catatan">
-                    <strong>Ketentuan:</strong>
-                    <p>Di kertas A4 dengan spasi 1,5.</p>
-                </div>
-            </article>
-
-        </div>
-    </details>
-
-</div>
-
-
-
+    </div>
 </main>
 
-
 <footer>
-FH 01 ANGKATAN 2026
+    FH 01 ANGKATAN 2026
 </footer>
 
 </body>
